@@ -1,6 +1,7 @@
 <?php
 /**
- * The Home template file.
+ *The Home template file.
+ *
  *
  * @package Catch Themes
  * @subpackage Catch Kathmandu

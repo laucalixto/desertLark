@@ -7,6 +7,64 @@
  * @since Catch Kathmandu 1.0
  */
 
+ 
+add_action( 'init', 'my_add_excerpts_to_pages' );
+function my_add_excerpts_to_pages() {
+     add_post_type_support( 'page', 'excerpt' );
+}
+ 
+ 
+
+/**
+ * Register our sidebars and widgetized areas.
+ *
+ */
+function arphabet_widgets_init() {
+	
+	register_sidebar( array(
+		'name' => 'Home Middle 1',
+		'id' => 'home_middle_1',
+		'before_widget' => '<div>',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="rounded">',
+		'after_title' => '</h2>',
+	) );
+	
+	register_sidebar( array(
+		'name' => 'Home Middle 2',
+		'id' => 'home_middle_2',
+		'before_widget' => '<div>',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="rounded">',
+		'after_title' => '</h2>',
+	) );
+	
+	register_sidebar( array(
+		'name' => 'Home Middle 3',
+		'id' => 'home_middle_3',
+		'before_widget' => '<div>',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="rounded">',
+		'after_title' => '</h2>',
+	) );
+	
+		register_sidebar( array(
+		'name' => 'Home Middle 4',
+		'id' => 'home_middle_4',
+		'before_widget' => '<div>',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="rounded">',
+		'after_title' => '</h2>',
+	) );
+	
+}
+add_action( 'widgets_init', 'arphabet_widgets_init' );
+
+
+add_image_size( 'small-thumb', 276, 179, true );
+
+
+
 
 if ( ! function_exists( 'catchkathmandu_setup' ) ) :
 /**

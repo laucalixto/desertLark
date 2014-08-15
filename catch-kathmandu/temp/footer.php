@@ -28,7 +28,7 @@
      */
     do_action( 'catchkathmandu_after_main' ); 
     ?> 
- 
+    
 	<footer id="colophon" role="contentinfo">
 		<?php
         /** 
@@ -45,32 +45,49 @@
 		 * catchkathmandu_after_footer_sidebar hook
 		 */
 		do_action( 'catchkathmandu_after_footer_sidebar' ); ?>   
-        
+           
         <div id="site-generator" class="container">
 			<?php 
             /** 
              * catchkathmandu_before_site_info hook
              */
             do_action( 'catchkathmandu_before_site_info' ); ?>  
-		<div>
-			<hr style="margin-top:-1px;"></hr>
-		</div>
-  <div id="page" class="hfeed site">
-
-		<div class="container-footer">
-        	<div class="logo-footer">
+                    
+        	<div class="site-info">
             	<?php 
-				 
-				echo '<div class="logo-footer-img">' . wp_get_attachment_image( 91 ) . '</div>';
-				?> 
+				/** 
+				 * catchkathmandu_site_info hook
+				 *
+				 * @hooked catchkathmandu_footer_content - 10
+				 */
+				do_action( 'catchkathmandu_site_generator' ); ?> 
           	</div><!-- .site-info -->
-            <div class="address-footer-info">
-						<div class="address-footer-info-text"><p>+212 (0)537 762265<br />2 Avenue de Mohamed El Fassi - Rabat - Marrocos<br />0000000000000000</p>
-						</div>
-				
-          	</div><!-- .site-info -->
-			
-    </div><!-- #page .hfeed .site -->
+            
+			<?php 
+            /** 
+             * catchkathmandu_after_site_info hook
+             */
+            do_action( 'catchkathmandu_after_site_info' ); ?>              
+       	</div><!-- #site-generator --> 
+        
+        <?php
+        /** 
+		 * catchkathmandu_after_site_generator hook
+		 */
+		do_action( 'catchkathmandu_after_site_generator' ); ?>  
+               
+	</footer><!-- #colophon .site-footer -->
+    
+    <?php 
+    /** 
+     * catchkathmandu_after_footer hook
+	 *
+     * @hooked catchkathmandu_scrollup - 10
+     */
+    do_action( 'catchkathmandu_after_footer' ); 
+    ?> 
+    
+</div><!-- #page .hfeed .site -->
 
 <?php 
 /** 

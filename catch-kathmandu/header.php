@@ -89,13 +89,19 @@ do_action( 'catchkathmandu_before' ); ?>
 		do_action( 'catchkathmandu_after_hgroup_wrap' ); ?>
         
 	</header><!-- #masthead .site-header -->
-    
+
 	<?php 
     /** 
      * catchkathmandu_after_header hook
      */
     do_action( 'catchkathmandu_after_header' ); ?> 
-        
+	
+</div>
+<div>
+	<hr style="margin-bottom:0px; margin-top:20px;"></hr>
+</div>
+  
+<div id="main" class="container">    
 	<?php 
     /** 
      * catchkathmandu_before_main hook
@@ -106,7 +112,9 @@ do_action( 'catchkathmandu_before' ); ?>
 	 * catchkathmandu_homepage_headline 15
      */
     do_action( 'catchkathmandu_before_main' ); ?>
-    
+ </div>   
+ 
+ <div id="page" class="hfeed site">
     <div id="main" class="container">
     
 		<?php 
@@ -127,4 +135,5 @@ do_action( 'catchkathmandu_before' ); ?>
          *
 	 	 * catchkathmandu_homepage_featured_display 10
          */
-        do_action( 'catchkathmandu_content_sidebar_start' ); ?>        
+        do_action( 'catchkathmandu_content_sidebar_start' ); ?>   
+</div>		
