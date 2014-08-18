@@ -520,13 +520,13 @@ add_filter( 'excerpt_more', 'catchkathmandu_excerpt_more' );
  *
  * function tied to the get_the_excerpt filter hook.
  */
-function catchkathmandu_custom_excerpt( $output ) {
-	if ( has_excerpt() && ! is_attachment() ) {
-		$output .= catchkathmandu_continue_reading();
-	}
-	return $output;
-}
-add_filter( 'get_the_excerpt', 'catchkathmandu_custom_excerpt' );
+//function catchkathmandu_custom_excerpt( $output ) {
+	//if ( has_excerpt() && ! is_attachment() ) {
+		//$output .= catchkathmandu_continue_reading();
+	//}
+	//return $output;
+//}
+//add_filter( 'get_the_excerpt', 'catchkathmandu_custom_excerpt' );
 
 
 /**

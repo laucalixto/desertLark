@@ -154,8 +154,8 @@ a img {
 }
 #secondary {
     float: right;
-    width: 210px;	/*valor default 380px*/
-	padding-top: 30px;
+    width: 240px;	/*valor default 380px*/
+	padding-top: 53px;
 }
 
 
@@ -189,7 +189,7 @@ blockquote,
 #infinite-handle,
 .comments-title, #reply-title,
 #respond {
-	margin-bottom: 50px;
+	margin-bottom: 15px;
 }
 #homepage-message {
 	padding-top: 30px;
@@ -267,7 +267,7 @@ article.format-aside .entry-title,
 	padding-bottom: 0;
 }
 #secondary .widget {
-    padding: 30px 40px;		
+    /*padding: 30px 40px;*/	
 }
 #secondary .widget.widget_catchkathmandu_social_widget {
     padding: 30px 40px 20px;		
@@ -333,8 +333,9 @@ article.format-aside .entry-title,
 #feature-home-excerpt{
 	padding-top: 25px;
 	width: 90%;
-	height:100px;
+	height:auto;
 }
+
 
 #feature-home-button{
 	color: #3e54a4;
@@ -426,6 +427,10 @@ article.format-aside .entry-title,
 	padding-bottom: 42px;
 }
 
+.title-home-middle-1 > .rounded{
+	margin-top: 0;
+}
+
 #content-two-column{
 	margin-top: 45px;
 	padding-bottom: 66px;
@@ -462,6 +467,13 @@ article.format-aside .entry-title,
 #containder-home-2{
 	padding-bottom: 52px;
 }
+
+#containder-home-2 h2.rounded{
+	margin-top: 64px;
+	margin-bottom: 45px;*
+}
+
+
 
 /* =Home Middle 3 e 4
 ----------------------------------------------- */
@@ -542,7 +554,17 @@ div.sola_nl_sign_up_box  input[type="submit"]{
 	float: right;
 }
 
+#pay-options-block{
+	dysplay: inline-block;
+}
 
+
+.pay-options-block-img{
+	float: left;
+	margin-top: 25px;
+	padding-right: 13px;
+	
+}
 ._4s7c{
 	width: 500px;
 }
@@ -569,22 +591,62 @@ div.sola_nl_sign_up_box  input[type="submit"]{
 	display:inline-block;
 	width: 33%;
 	float: left; 
-	
 	height:auto;
 
 }
 
+#last-posts-home-button{
+	color: #3e54a4;
+	text-decoration: underline;
+	margin-top: 20px;
+	margin-bottom: 64px;
+	background-color:  #D1D3D4;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align:center;
+	border-radius : 8px;
+	-moz-border-radius : 8px;
+	-webkit-border-radius : 8px;
+	border: 1.5px solid #939597;
+}
+
+.align-last-post-button{
+	margin-left: 20%;
+	
+}
+
+.align-last-post-column{
+	height: auto;
+	margin-bottom: 10px;
+}
+
+.align-last-post-column p{
+	padding-left: 0;
+	margin: 0;
+}	
+
+
 #feature-thumbnail-home-posts{
 	padding-right: 33%; 
 }
+#last-post-title-home{
+	font-size: 25px;
+	padding-top: 25px;
+	padding-right: 25px;
+	color : #4D4D4F;
+	color : rgb(77, 77, 79);
+}
+
 
 /* =Widget Clima
 ----------------------------------------------- */
 
 .rounded{
 	font-size: 25px;
-	margin-top: 64px;
-	margin-bottom: 45px;
+	/*margin-top: 64px;
+	margin-bottom: 45px;*/
 }
 
 
@@ -1105,7 +1167,9 @@ img#wpstats {
 	color: none;
 }
 
-
+.header-sidebar .widget ul.menu .current_page_item > a{
+	color: #707070;
+}
 /*
 li#menu-item-24{
 background:transparent url(images/arrowdown.png) no-repeat center right;
@@ -1462,20 +1526,31 @@ background:transparent url(images/arrowdown.png) no-repeat center right;
 
 /* =Content
 ----------------------------------------------- */
+div.entry-container{
+
+
+}
 
 #content .page {
 	border: none;
 	padding-bottom: 0;
+	float: left;
 }
 .entry-meta {
 	clear: both;
 	color: #757575;
 	font-size: 14px;
 	font-size: 1.4rem;
+	
 }
 .entry-header .entry-title {
 	color: #222;
+
 }
+.entry-summary{
+	float: left;
+}
+
 .entry-header .entry-title a {
 	color: #222;
 	text-decoration: none;
@@ -1509,7 +1584,8 @@ background:transparent url(images/arrowdown.png) no-repeat center right;
 	word-wrap: break-word;
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
-	hyphens: auto;	
+	hyphens: auto;
+	
 }
 .entry-content ol,
 .comment-content ol,
@@ -1817,6 +1893,7 @@ img.wp-post-image {
 	display: block;
 	max-width: 100%;
 	height: auto; /* Prevent stretching of full-size images with height and width attributes in IE8 */
+	
 }
 #featured-post img,
 #main-slider img {
@@ -2125,16 +2202,20 @@ li.bypostauthor cite span {
 ----------------------------------------------- */
 
 #secondary .widget {
-	border: 1px solid #eee;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+	/*border: 1px solid #eee;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);*/
 }
 .widget-title {
-	color: #222;
-	font-size: 20px;
-	font-size: 2rem;
+	color: #24154a;
+	font-size: 16x;
+	font-size: 1.6rem;
+	background-color: #f3f3b8;
+	padding: 11px 18px 12px 18px;
 }
 .widget-area .widget a {
-	color: #757575;
+	color: #24154a;
+	font-size: 16px;
+	text-decoration: underline;
 }
 .widget-area .widget .widget-title a {
 	color: #222;
@@ -2162,7 +2243,6 @@ li.bypostauthor cite span {
 	padding-right: 35px;
 	text-align: right;
 }
-
 
 /* Search Widget */
 input#s {

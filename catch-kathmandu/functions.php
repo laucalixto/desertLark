@@ -13,7 +13,12 @@ function my_add_excerpts_to_pages() {
      add_post_type_support( 'page', 'excerpt' );
 }
  
- 
+// Replaces the excerpt "more" text by a link
+function new_excerpt_more($post) {
+    remove_filter('excerpt_more', 'new_excerpt_more'); 
+    return ' <a class="read_more" href="'. get_permalink($post->ID) . '">' . 'read more' . '</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
 
 /**
  * Register our sidebars and widgetized areas.
@@ -83,7 +88,7 @@ function catchkathmandu_setup() {
 	 * Global content width.
 	 */
 	 if (!isset($content_width))
-     	$content_width = 750;
+     	$content_width = 650;
 				
 	/**
 	 * Make theme available for translation
@@ -178,7 +183,7 @@ function catchkathmandu_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	add_image_size( 'slider', 1280, 550, true); //Featured Post Slider Image
-	add_image_size( 'featured', 750, 499, true); //Featured Image
+	add_image_size( 'featured', 276, 179, true); //Featured Image - defaults 750px x499px
 	add_image_size( 'small-featured', 360, 240, true); //Small Featured Image		
 
 }

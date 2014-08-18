@@ -47,23 +47,24 @@ get_header(); ?>
 					<div class="content-three-column">
 					
 						<div class="column-left">
-							<?php
+						<?php
 								$my_id = 79;
 								$queried_page= get_post($my_id);
 								$title = $queried_page->post_title;
 								$content = $queried_page->post_excerpt;
-								//$content = apply_filters('the_content', $content);
-								//$content = str_replace(']]>', ']]>', $content);
+								$content = apply_filters('the_content', $content);
+								$content = str_replace(']]>', ']]>', $content);
 							
-								echo '<div id="feature-thumbnail-home" class="align-column-left">' . get_the_post_thumbnail($my_id) .'</div>';
+								echo '<div id="feature-thumbnail-home" class="align-column-left">' . get_the_post_thumbnail($my_id, 'small-thumb') .'</div>';
 							
 								echo '<div id="feature-title-home" class="align-column-left"><h1>' . $title . '</h1></div>';
 							
-								echo '<div id="feature-home-excerpt" class="align-column-left"><p>' . $content . '</p></div>';
-							
+								echo '<div id="feature-home-excerpt" class="align-column-left">' . $content . '</div>';
+								
 								echo '<div id="feature-home-button" class="align-column-button-left"><a href=' . get_permalink($my_id) .'>EXPLORE MAIS</a></div>';
 								?>
-														
+												
+																					
 						</div>
 					
 						<div class="column-center">
@@ -72,14 +73,14 @@ get_header(); ?>
 								$queried_page= get_post($my_id);
 								$title = $queried_page->post_title;
 								$content = $queried_page->post_excerpt;
-								//$content = apply_filters('the_content', $content);
-								//$content = str_replace(']]>', ']]>', $content);
+								$content = apply_filters('the_content', $content);
+								$content = str_replace(']]>', ']]>', $content);
 							
-								echo '<div id="feature-thumbnail-home" class="align-column-center">' . get_the_post_thumbnail($my_id) .'</div>';
+								echo '<div id="feature-thumbnail-home" class="align-column-center">' . get_the_post_thumbnail($my_id, 'small-thumb') .'</div>';
 							
 								echo '<div id="feature-title-home" class="align-column-center"><h1>' . $title . '</h1></div>';
 							
-								echo '<div id="feature-home-excerpt" class="align-column-center"><p>' . $content . '</p></div>';
+								echo '<div id="feature-home-excerpt" class="align-column-center">' . $content . '</div>';
 								
 								echo '<div id="feature-home-button" class="align-column-button-center"><a href=' . get_permalink($my_id) .'>EXPLORE MAIS</a></div>';
 								?>
@@ -92,14 +93,14 @@ get_header(); ?>
 								$queried_page= get_post($my_id);
 								$title = $queried_page->post_title;
 								$content = $queried_page->post_excerpt;
-								//$content = apply_filters('the_content', $content);
-								//$content = str_replace(']]>', ']]>', $content);
+								$content = apply_filters('the_content', $content);
+								$content = str_replace(']]>', ']]>', $content);
 							
-								echo '<div id="feature-thumbnail-home" class="align-column-right">' . get_the_post_thumbnail($my_id) .'</div>';
+								echo '<div id="feature-thumbnail-home" class="align-column-right">' . get_the_post_thumbnail($my_id, 'small-thumb') .'</div>';
 							
 								echo '<div id="feature-title-home" class="align-column-right"><h1>' . $title . '</h1></div>';
 							
-								echo '<div id="feature-home-excerpt" class="align-column-right"><p>' . $content . '</p></div>';
+								echo '<div id="feature-home-excerpt" class="align-column-right">' . $content . '</div>';
 							
 								echo '<div id="feature-home-button" class="align-column-button-right"><a href=' . get_permalink($my_id) .'>EXPLORE MAIS</a></div>';
 								?>
@@ -129,11 +130,11 @@ get_header(); ?>
 							
 							<div id="feature-thumbnail-home-posts" class="align-column-left"> <?php the_post_thumbnail( 'small-thumb' ); ?></div>
 						
-							 <div id="feature-title-home" class="align-column-left"><h1><?php the_title(); ?></h1></div>
+							 <div id="last-post-title-home" class="align-last-post-column"><h1><?php the_title(); ?></h1></div>
 							
-							<div id="feature-home-excerpt" class="align-column-left"><p><?php  the_excerpt();?></p></div>	 
+							<div id="feature-home-excerpt" class="align-last-post-column"><p><?php  the_excerpt("ver");?><?php  ?></p></div>	 
 								
-							<div id="feature-home-button" class="align-column-button-left"><a href=' <?php the_permalink(); ?>'>CONTINUE LENDO</a></div>	
+							<div id="last-posts-home-button" class="align-last-post-button"><a href=' <?php the_permalink(); ?>'>CONTINUE LENDO</a></div>	
 												
 						</div>								
 						
@@ -188,6 +189,21 @@ get_header(); ?>
 								<div id="title-home-middle-3"> 
 									<h1 >Opções de pagamento</h1>
 								</div>
+								
+									<div id="pay-options-block">
+												
+									<?php 
+									echo '<div class="pay-options-block-img">' . 	wp_get_attachment_image( 119) . '</div>';
+									?> 
+									<?php 
+									echo '<div class="pay-options-block-img">' . wp_get_attachment_image(118) . '</div>';
+									?> 
+									<?php 
+									echo '<div class="pay-options-block-img">' . wp_get_attachment_image( 120) . '</div>';
+									?> 						
+									</div >
+								
+								
 								<?php
 									if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Home Middle 3') ) :
 									?>
